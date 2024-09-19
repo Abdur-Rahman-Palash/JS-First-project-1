@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2166435234.js" crossorigin="anonymous"></script>
+    <style>
+    .outfit-font {
+            font-family: "Outfit", sans-serif;
+            }
+    </style>
+</head>
+<body class="outfit-font">
+    <h1 class="text-center text-2xl font-extrabold mt-8">welcome to our service</h1>
+    <main class="w-96 border-2 border-slate-300 border-solid mx-auto mt-8 rounded-md px-4">
+        <section>
+ <div class="flex justify-around items-center gap-16 mt-8">
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div id="account-balance" class="stat-value">400</div>
+                      <div class="stat-desc">Available Balance</div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="btn"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+                  </div>
+            </div>
+        </section>
+       <div class="divider"></div>
+       <div class="text-center text-2xl">
+        <h1 class="font-extrabold">🔥 Welcome to Payooo!</h1>
+        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+       </div>
+       <section>
+        <div class="grid grid-cols-3 gap-4 mt-8 px-4">
+            <button id="add-money" class="btn btn-primary">Add Money</button>
+            <button id="cash-out" class="btn btn-primary">Cash Out</button>
+            <button id="transfer" class="btn btn-primary">Transfer Money</button>
+            <button id="bonus" class="btn btn-primary">Get Bonus</button>
+            <button id="bill" class="btn btn-primary">Pay Bill</button>
+            <button id="transaction" class="btn btn-primary">Transactions</button>
+        </div>
+       </section>
+       <section >
+        <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-6">
+            <form class="card-body" autocomplete="on">
+              <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Select a Bank</span>
+                  </label>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option disabled selected>Select a Bank</option>
+                    <option>DBBL</option>
+                    <option>UCB</option>
+                  </select>
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input id="account" type="text" placeholder="Enter 12 digit Bank Account Number " class="input input-bordered" required />
+                <label class="label">
+                    <span class="label-text">Amount to add</span>
+                  </label>
+                  <input id="amount" type="text" placeholder="Enter Amount to add" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">4 Digit Pin</span>
+                </label>
+                <input id="pin" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-to-money" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+       </section>
+       <section>
+        <div id="cash-out-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-6">
+            <h1 class="px-3 text-center font-extrabold mt-8">Cash out</h1>
+            <form class="card-body" autocomplete="on">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text"> Agent Number</span>
+                </label>
+                <input type="text" placeholder="Enter agent Number " class="input input-bordered" required />
+                <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="amount1" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">4 Digit Pin</span>
+                </label>
+                <input id="pin1" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="withdraw"  class="btn btn-primary">Withdraw Money</button>
+              </div>
+            </form>
+          </div>
+       </section>
+        <section>
+        <div id="transfer-money"  class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-6">
+            <h1 class="px-3 text-center font-extrabold mt-8">Transfer Money</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">User Account Number</span>
+                </label>
+                <input type="text" placeholder="Enter 12 digit Bank Account Number " class="input input-bordered" required />
+                <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input type="text" placeholder="Enter Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">4 Digit Pin</span>
+                </label>
+                <input type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button class="btn btn-primary">Send Now</button>
+              </div>
+            </form>
+          </div>
+       </section>
+        <section>
+        <div id="bonus-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-6">
+            <h1 class="px-3 text-center font-extrabold mt-8">Bonus Coupon</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Enter bonus coupon</span>
+                </label>
+                <input id="coupon" type="text" placeholder="Enter bonus coupon code " class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="get-bonus" class="btn btn-primary">Get Bonus</button>
+              </div>
+            </form>
+          </div>
+       </section>
+       <section>
+        <div id="pay-bill" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-6">
+            <h1 class="px-3 text-center font-extrabold mt-8">Pay Bill</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Select to pay</span>
+                  </label>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option disabled selected>Select a Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagad</option>
+                  </select>
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input type="text" placeholder="Enter 12 digit Bank Account Number " class="input input-bordered" required />
+                <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="amount-input" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">4 Digit Pin</span>
+                </label>
+                <input id="pay-pin" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="pay-bills" class="btn btn-primary">Pay Bill</button>
+              </div>
+            </form>
+          </div>
+       </section>
+       <section> 
+       <h1 id="history" class="px-3 text-center font-extrabold mt-8 hidden">Transaction History</h1>
+         
+       </section>
+      
+  </div>
+      
+    </main>
+   
+      
+   <script src="./common.js"></script>
+    <script src="./toggle.js"></script>
+    <script src="./addmoney.js"></script>
+    <script src="./cashout.js"></script>
+    <script src="./transection.js"></script>
+    <script src="./pay.js"></script>
+</body>
+</html>
